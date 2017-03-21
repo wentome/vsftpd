@@ -1,0 +1,20 @@
+This is  leaest version of vsftpd
+
+1:unzip it 
+2:use "make" command to compile it
+    when do make , maby a error of "crypt" will occurr,dont'worry,just add "-lcrypt" option for "LDFLAGS" in Makefile.
+    then "make" again 
+3:use "make install" command to install it
+    when do make , maby a error of about "man8"and "man5"will occurr, just creat 2 folders  /usr/local/man/man8  and /usr/local/man/man5 
+    then "make install" again
+4:form EXAMPLE/INTERNET_SITE_NOINETD copy vsftpd.conf to /etc
+
+5:config /etc/vsftpd.conf
+    anonymous_enable=YES
+    local_enable=YES
+    write_enable=YES
+    
+6:start vsftpd
+  sudo vsftpd
+  
+7 use "FileZilla" ftp terminal to access vsftpd
