@@ -17,4 +17,4 @@ This is  leaest version of vsftpd
 6:start vsftpd
   sudo vsftpd
   
-7 use "FileZilla" ftp terminal to access vsftpd
+7 use "FileZilla" ftp client to access vsftpd
