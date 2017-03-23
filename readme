@@ -4,9 +4,17 @@ This is  leaest version of vsftpd
 2:use "make" command to compile it
     when do make , maby a error of "crypt" will occurr,dont'worry,just add "-lcrypt" option for "LDFLAGS" in Makefile.
     then "make" again 
+    
+    
+ 根据Makefile 产生一个vsftpd的可执行文件
 3:use "make install" command to install it
     when do make , maby a error of about "man8"and "man5"will occurr, just creat 2 folders  /usr/local/man/man8  and /usr/local/man/man5 
     then "make install" again
+    将可执行文件vsftpd (install) 就是copy到/usr/local/sbin/下  所以执行vsftpd 其实就是调用这个可执行文件
+    将vsftpd.8   vsftpd.conf.5 安装到/usr/man/man8  /usr/man/man5下  如果没有这两个文件夹 就会报错。
+    
+ 4：/etc下如果存在xinetd.d  就copy xinetd.d/vsftpd  到  /etc/xinetd.d/vsftpd
+    
 4:form EXAMPLE/INTERNET_SITE_NOINETD copy vsftpd.conf to /etc
 
 5:config /etc/vsftpd.conf
